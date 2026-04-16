@@ -1,15 +1,34 @@
 <!doctype html>
-<html><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cinematic Sequence</title><link rel="stylesheet" href="./styles.css">
-<style>
-  .scene{min-height:70vh;padding:3rem 2rem;display:grid;align-content:end;opacity:.45;transition:opacity .35s}
-  .scene:hover{opacity:1}
-</style>
-</head><body>
-<p class="wrap"><a href="./index.html">Back</a></p>
-<section class="scene" style="background:var(--white)"><h1>Scene One</h1><p>Opening still and quiet statement.</p></section>
-<section class="scene" style="background:var(--beige)"><h1>Scene Two</h1><p>Process appears as slow reveal text.</p></section>
-<section class="scene" style="background:var(--white)"><h1>Scene Three</h1><p>Visual evidence enters as one frame.</p></section>
-<section class="scene" style="background:var(--beige)"><h1>Scene Four</h1><p>Final call to discuss project scope.</p></section>
-</body></html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cinematic · Option 7</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Source+Serif+4:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script>
+  (function () {
+    if (/[?&]embed=1(?:&|$)/.test(location.search)) document.documentElement.classList.add("is-embed");
+  })();
+  </script>
+</head>
+<body>
+  <header class="site-nav" role="banner">
+    <div class="site-nav-inner">
+      <a class="site-nav-brand" href="index.html#p3">Tenet previews</a>
+      <nav class="site-nav-primary" aria-label="Preview options">
+        <a href="index.html#p1">Option 1 · Manuscript</a>
+        <a href="index.html#p7" class="is-active">Option 7 · Cinematic</a>
+        <a href="index.html#p3">Option 3 · Scroll (1 + 7)</a>
+      </nav>
+    </div>
+  </header>
+  <p class="wrap nav-back"><a href="index.html#p7">Back to hub</a></p>
+  <section class="scene" style="background:var(--white)"><div class="wrap"><h1>Scene One</h1><p>Opening still and quiet statement.</p></div></section>
+  <section class="scene" style="background:var(--beige)"><div class="wrap"><h1>Scene Two</h1><p>Process appears as slow reveal text.</p></div></section>
+  <section class="scene" style="background:var(--white)"><div class="wrap"><h1>Scene Three</h1><p>Visual evidence enters as one frame.</p></div></section>
+  <section class="scene" style="background:var(--beige)"><div class="wrap"><h1>Scene Four</h1><p>Final call to discuss project scope.</p></div></section>
+</body>
+</html>

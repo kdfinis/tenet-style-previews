@@ -3,25 +3,169 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TENET Style Previews</title>
+  <title>Tenet style previews · Options 1, 7, and 3</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Source+Serif+4:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css" />
+  <style>
+    .site-main-header {
+      margin-bottom: 1rem;
+    }
+    .site-main-header h1 {
+      margin: 0 0 0.35rem;
+      font-size: 1.25rem;
+    }
+    .hub-panel > p.note {
+      margin: 0 0 0.75rem;
+    }
+    .frame-wrap {
+      border: 1px solid var(--taupe);
+      background: var(--white);
+      min-height: 72vh;
+    }
+    .frame-wrap iframe {
+      display: block;
+      width: 100%;
+      height: 72vh;
+      border: 0;
+    }
+  </style>
 </head>
 <body>
-  <main class="wrap">
-    <h1>Tenet Non-Standard Style Previews</h1>
-    <p class="note">Basic localhost mockups only. Palette locked to #28374B, #F8F7F3, #FFFFFF, #B6B2A9.</p>
-    <div class="home-grid">
-      <a class="card" href="./01-manuscript.html"><h3>1. Architectural Manuscript</h3><p>Editorial long-form reading flow.</p></a>
-      <a class="card" href="./02-blueprint.html"><h3>2. Blueprint Reader</h3><p>Annotation and technical drawing UI.</p></a>
-      <a class="card" href="./03-horizontal.html"><h3>3. Horizontal Ribbon</h3><p>Sideways narrative movement.</p></a>
-      <a class="card" href="./04-collage.html"><h3>4. Studio Wall Collage</h3><p>Overlapping composition blocks.</p></a>
-      <a class="card" href="./05-atlas.html"><h3>5. Timeline Atlas</h3><p>Fixed rail with scene swapping.</p></a>
-      <a class="card" href="./06-typography.html"><h3>6. Monolithic Type Stage</h3><p>Type-first layout and rhythm.</p></a>
-      <a class="card" href="./07-cinematic.html"><h3>7. Cinematic Sequence</h3><p>Scene-by-scene storytelling.</p></a>
+  <header class="site-nav" role="banner">
+    <div class="site-nav-inner">
+      <a class="site-nav-brand" href="index.html#p3">Tenet previews</a>
+      <nav class="site-nav-primary" aria-label="Preview options">
+        <a href="#p1" id="link-nav-1">Option 1 · Manuscript</a>
+        <a href="#p7" id="link-nav-7">Option 7 · Cinematic</a>
+        <a href="#p3" id="link-nav-3">Option 3 · Scroll (1 + 7)</a>
+      </nav>
+      <nav id="nav-jump-3" class="site-nav-jump" aria-label="Option 3 scroll targets" hidden>
+        <a href="#manuscript" id="jump-manuscript">Manuscript</a>
+        <span class="site-nav-sep" aria-hidden="true">|</span>
+        <a href="#cinematic" id="jump-cinematic">Cinematic</a>
+      </nav>
     </div>
+  </header>
+
+  <main class="wrap">
+    <header class="site-main-header">
+      <h1>Tenet style previews</h1>
+      <p class="note">Local mockups only. Colors are limited to the four swatches in <code>palette-reference.png</code> (navy #283345, cream #F7F6F2, taupe #C8C2B7, white #FFFFFF).</p>
+      <p class="note" style="margin-top:0.5rem"><strong>Option 3</strong> is one page: start with Manuscript, scroll down into Cinematic (Scene One through Scene Four). You can also use the nav links.</p>
+    </header>
+
+    <section id="panel-1" class="hub-panel" role="region" aria-label="Option 1" hidden>
+      <p class="note">Full-page preview 1 (Architectural Manuscript), same content as Option 3 at the top.</p>
+      <div class="frame-wrap">
+        <iframe title="Option 1 – Manuscript" src="./01-manuscript.html?embed=1"></iframe>
+      </div>
+    </section>
+
+    <section id="panel-7" class="hub-panel" role="region" aria-label="Option 7" hidden>
+      <p class="note">Full-page preview 7 (Cinematic Sequence), same scenes as the lower part of Option 3.</p>
+      <div class="frame-wrap">
+        <iframe title="Option 7 – Cinematic" src="./07-cinematic.html?embed=1"></iframe>
+      </div>
+    </section>
+
+    <section id="panel-3" class="hub-panel" role="region" aria-label="Option 3 combined scroll">
+      <div class="opt3-flow">
+        <div id="manuscript" class="opt3-anchor opt3-manuscript-inner">
+          <h1>Architectural Manuscript</h1>
+          <p class="note">Long document feel with margin notes and chapter plates.</p>
+          <section style="display:grid;grid-template-columns:1fr 180px;gap:1rem">
+            <article>
+              <h2>Chapter One</h2>
+              <p>This concept reads like a printed architectural essay with calm cadence and high whitespace.</p>
+              <p>Each block is focused, with subtle visual inserts between paragraphs instead of normal web sections.</p>
+              <div class="plate"></div>
+              <h2>Chapter Two</h2>
+              <p>Use this when narrative and authority matter more than conversion template patterns.</p>
+            </article>
+            <aside>
+              <div class="card">Note 01<br><span class="note">Margin commentary.</span></div>
+              <div class="card">Note 02<br><span class="note">Figure reference.</span></div>
+            </aside>
+          </section>
+        </div>
+
+        <div class="opt3-between" aria-hidden="true">Scroll down · Cinematic sequence</div>
+
+        <div id="cinematic" class="opt3-anchor">
+          <section class="scene" style="background:var(--white)"><div class="wrap"><h1>Scene One</h1><p>Opening still and quiet statement.</p></div></section>
+          <section class="scene" style="background:var(--beige)"><div class="wrap"><h1>Scene Two</h1><p>Process appears as slow reveal text.</p></div></section>
+          <section class="scene" style="background:var(--white)"><div class="wrap"><h1>Scene Three</h1><p>Visual evidence enters as one frame.</p></div></section>
+          <section class="scene" style="background:var(--beige)"><div class="wrap"><h1>Scene Four</h1><p>Final call to discuss project scope.</p></div></section>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <script>
+    (function () {
+      var panels = {
+        "1": document.getElementById("panel-1"),
+        "7": document.getElementById("panel-7"),
+        "3": document.getElementById("panel-3")
+      };
+      var links = {
+        "1": document.getElementById("link-nav-1"),
+        "7": document.getElementById("link-nav-7"),
+        "3": document.getElementById("link-nav-3")
+      };
+      var navJump = document.getElementById("nav-jump-3");
+
+      function showMain(which) {
+        ["1", "7", "3"].forEach(function (k) {
+          var on = k === which;
+          panels[k].hidden = !on;
+          links[k].classList.toggle("is-active", on);
+        });
+        navJump.hidden = which !== "3";
+        if (history.replaceState) {
+          history.replaceState(null, "", "#p" + which);
+        }
+      }
+
+      function hashToMode() {
+        var h = (location.hash || "").replace(/^#/, "");
+        if (h === "p1") return "1";
+        if (h === "p7") return "7";
+        if (h === "p3") return "3";
+        return "3";
+      }
+
+      showMain(hashToMode());
+      window.addEventListener("hashchange", function () {
+        showMain(hashToMode());
+      });
+
+      function scrollToId(id) {
+        var el = document.getElementById(id);
+        if (!el) return;
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            el.scrollIntoView({ behavior: "smooth", block: "start" });
+          });
+        });
+      }
+
+      function bindJump(anchor, id) {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          showMain("3");
+          if (history.replaceState) {
+            history.replaceState(null, "", "#p3");
+          }
+          scrollToId(id);
+        });
+      }
+
+      bindJump(document.getElementById("jump-manuscript"), "manuscript");
+      bindJump(document.getElementById("jump-cinematic"), "cinematic");
+    })();
+  </script>
 </body>
 </html>

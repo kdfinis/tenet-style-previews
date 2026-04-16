@@ -1,25 +1,48 @@
 <!doctype html>
-<html><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Manuscript</title><link rel="stylesheet" href="./styles.css">
-</head><body>
-<main class="wrap" style="max-width:760px">
-  <p><a href="./index.html">Back</a></p>
-  <h1>Architectural Manuscript</h1>
-  <p class="note">Long document feel with margin notes and chapter plates.</p>
-  <section style="display:grid;grid-template-columns:1fr 180px;gap:1rem">
-    <article>
-      <h2>Chapter One</h2>
-      <p>This concept reads like a printed architectural essay with calm cadence and high whitespace.</p>
-      <p>Each block is focused, with subtle visual inserts between paragraphs instead of normal web sections.</p>
-      <div class="plate"></div>
-      <h2>Chapter Two</h2>
-      <p>Use this when narrative and authority matter more than conversion template patterns.</p>
-    </article>
-    <aside>
-      <div class="card">Note 01<br><span class="note">Margin commentary.</span></div>
-      <div class="card">Note 02<br><span class="note">Figure reference.</span></div>
-    </aside>
-  </section>
-</main>
-</body></html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manuscript · Option 1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Source+Serif+4:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script>
+  (function () {
+    if (/[?&]embed=1(?:&|$)/.test(location.search)) document.documentElement.classList.add("is-embed");
+  })();
+  </script>
+</head>
+<body>
+  <header class="site-nav" role="banner">
+    <div class="site-nav-inner">
+      <a class="site-nav-brand" href="index.html#p3">Tenet previews</a>
+      <nav class="site-nav-primary" aria-label="Preview options">
+        <a href="index.html#p1" class="is-active">Option 1 · Manuscript</a>
+        <a href="index.html#p7">Option 7 · Cinematic</a>
+        <a href="index.html#p3">Option 3 · Scroll (1 + 7)</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap" style="max-width:760px;margin:0 auto">
+    <p class="nav-back"><a href="index.html#p1">Back to hub</a></p>
+    <h1>Architectural Manuscript</h1>
+    <p class="note">Long document feel with margin notes and chapter plates.</p>
+    <section style="display:grid;grid-template-columns:1fr 180px;gap:1rem">
+      <article>
+        <h2>Chapter One</h2>
+        <p>This concept reads like a printed architectural essay with calm cadence and high whitespace.</p>
+        <p>Each block is focused, with subtle visual inserts between paragraphs instead of normal web sections.</p>
+        <div class="plate"></div>
+        <h2>Chapter Two</h2>
+        <p>Use this when narrative and authority matter more than conversion template patterns.</p>
+      </article>
+      <aside>
+        <div class="card">Note 01<br><span class="note">Margin commentary.</span></div>
+        <div class="card">Note 02<br><span class="note">Figure reference.</span></div>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>
